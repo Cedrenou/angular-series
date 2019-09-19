@@ -24,6 +24,12 @@
       ],
       "ng8-common/*": [
         "dist/ng8-common/*"
+      ],
+      "ng8-material": [
+        "dist/ng8-material"
+      ],
+      "ng8-material/*": [
+        "dist/ng8-material/*"
       ]
     }
   },

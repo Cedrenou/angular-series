@@ -28,6 +28,7 @@
               "projects/home/src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/home/src/styles.scss"
             ],
             "scripts": []
@@ -93,6 +94,7 @@
               "projects/home/src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/home/src/styles.scss"
             ],
             "scripts": []
@@ -150,6 +152,7 @@
               "projects/profile/src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/profile/src/styles.scss"
             ],
             "scripts": []
@@ -215,6 +218,7 @@
               "projects/profile/src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/profile/src/styles.scss"
             ],
             "scripts": []
@@ -286,6 +290,42 @@
           }
         }
       }
-    }},
+    },
+    "ng8-material": {
+      "projectType": "library",
+      "root": "projects/ng8-material",
+      "sourceRoot": "projects/ng8-material/src",
+      "prefix": "ng8-material",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng8-material/tsconfig.lib.json",
+            "project": "projects/ng8-material/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng8-material/src/test.ts",
+            "tsConfig": "projects/ng8-material/tsconfig.spec.json",
+            "karmaConfig": "projects/ng8-material/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng8-material/tsconfig.lib.json",
+              "projects/ng8-material/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "defaultProject": "home"
 }

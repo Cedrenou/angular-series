@@ -1,10 +1,13 @@
-import { NgModule } from '@angular/core';
-import { FooterComponent } from './footer/footer.component';
+import {NgModule} from '@angular/core';
+import {FooterComponent} from './footer/footer.component';
+import {TopNavComponent} from './top-nav/top-nav.component';
+import {Ng8MaterialModule} from '@ng8/material';
 
 @NgModule({
-  declarations: [FooterComponent],
-  imports: [
+  declarations: [FooterComponent, TopNavComponent],
+  imports: [Ng8MaterialModule,
   ],
-  exports: [FooterComponent]
+  exports: [FooterComponent, TopNavComponent]
 })
-export class Ng8CommonModule { }
+export class Ng8CommonModule {
+}
